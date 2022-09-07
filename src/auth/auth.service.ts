@@ -3,7 +3,6 @@ import { AuthCredentialsDto } from './dto/auth-credentials.dto';
 import { UserRepository } from './users.repository';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
-import { sign } from 'crypto';
 import { JwtPayload } from './user-payload.interface';
 
 @Injectable()
