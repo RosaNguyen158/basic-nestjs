@@ -7,6 +7,12 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     TasksModule,
     TypeOrmModule.forRoot({
+      ssl: true,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      },
       type: 'postgres',
       host: 'localhost',
       port: 5432,
